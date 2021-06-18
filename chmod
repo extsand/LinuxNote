@@ -1,6 +1,10 @@
 #how to use chmod with numbers
+1 - user - u
+2 - group - g
+3 - all - a
 
-r = 4
+
+r = 4 
 w = 2
 x = 1
 
