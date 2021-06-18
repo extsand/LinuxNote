@@ -1,0 +1,21 @@
+#how to use chmod with numbers
+
+r = 4
+w = 2
+x = 1
+
+rwx - 7 (4+2+1)
+rw- - 6 (4+2+0)
+r-x - 5 (4+0+1)
+r-- - 4 (4+0+0)
+-wx - 3 (0+2+1)
+-w- - 2 (0+2+0)
+--x - 1 (0+0+1)
+--- - 0 (0+0+0)
+
+#example:
+
+sudo chmod 777 file_name.txt
+7 - user
+7 - group
+7 - other
