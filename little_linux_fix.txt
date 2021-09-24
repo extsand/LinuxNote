@@ -1,0 +1,27 @@
+#!/bin/bash
+#fix username and password
+#from default to admin
+
+# 1 part 
+# make fixer user and add him sudo attr
+sudo adduser fixer
+sudo usermod -aG sudo fixer
+
+
+#2 Part
+# Login as fixer user to system and modify default login, group, home directories 
+sudo usermod -l admin student
+sudo usermod -d /home/admin -m admin
+sudo groupmod -n admin student
+
+
+#3 Part
+# Login as modify user 
+#change password ans workstation name
+sudo passwd
+sudo echo'wrstation-101' > /etc/hostname
+
+
+#4 Part
+#Delete fixer user
+sudo userdel -r fixer
